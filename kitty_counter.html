@@ -1,0 +1,34 @@
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+  <title>Cat Clicker</title>
+
+</head>
+<body>
+  <img class='cat-image' src="../../../Downloads/kitty.jpg" alt="Cat 1 image"/>
+  <span id='counter-element1'>Counter: 0</span>
+
+  <img class='cat-image' src="../../../Downloads/cat2.jpg" alt="Cat 2 image"/>
+  <span id='counter-element2'>Counter: 0</span>
+</body>
+
+<script charset="utf-8">
+  var elem1 = document.getElementsByClassName('cat-image')[0];
+  var counterElement1 = document.getElementById('counter-element1');
+
+  var elem2 = document.getElementsByClassName('cat-image')[1];
+  var counterElement2 = document.getElementById('counter-element2');
+
+  var counter1 = 0;
+  var counter2 = 0;
+
+  elem1.addEventListener('click', function(){
+    counter1 += 1;
+    return counterElement1.innerText = 'Counter: ' + counter1;
+  }, false);
+
+  elem2.addEventListener('click', function(){
+    counter2 += 1;
+    return counterElement2.innerText = 'Counter: ' + counter2;
+  }, false);
+</script>
